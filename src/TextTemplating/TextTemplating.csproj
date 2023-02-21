@@ -6,7 +6,7 @@
     <AssemblyName>TextTemplating.Core</AssemblyName>
     <PackageId>TextTemplating.Core</PackageId>
     <PackageTags>CSX T4 TextTemplating netcore</PackageTags>    
-    <Version>5.0.0.5</Version>
+    <Version>5.0.0.6</Version>
     <PackageProjectUrl>https://github.com/Jacknq/TextTemplatingCore</PackageProjectUrl>
     <PackageLicense>http://www.opensource.org/licenses/MIT</PackageLicense>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>    
