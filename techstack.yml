@@ -1,0 +1,486 @@
+repo_name: Jacknq/TextTemplatingCore
+report_id: cd929e90c73c4d6db023f9793ee4d9d7
+repo_type: Public
+timestamp: '2023-11-09T15:43:16+00:00'
+requested_by: Jacknq
+provider: github
+branch: master
+detected_tools_count: 36
+tools:
+- name: C#
+  description: Simple, general-purpose, object-oriented programming language for the
+    .NET platform
+  website_url: http://csharp.net
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1015/1200px-C_Sharp_wordmark.svg.png
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source: Repo Metadata
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source: Repo Metadata
+- name: ".NET"
+  description: A free, cross-platform, open source developer platform for building
+    many different types of applications
+  website_url: http://www.microsoft.com/net/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1014/IoPy1dce_400x400.png
+  detection_source: tests/Test/TextTemplating.Test.csproj
+  last_updated_by: Jerry
+  last_updated_on: 2018-06-26 15:22:28.000000000 Z
+- name: ".NET Core"
+  description: An Open Source, General-Purpose Development Platform Maintained by
+    Microsoft and the .NET Community
+  website_url: https://docs.microsoft.com/en-us/dotnet/core/
+  version: '3.1'
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/6403/default_91fc1f0ee315262794273aa1387eaf8fed8436e6.png
+  detection_source_url: samples/DesignTimeSample/DesignTimeSample.csproj
+  detection_source: tests/Test/TextTemplating.Test.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 16:18:57.000000000 Z
+- name: ASP.NET Core
+  description: A cross-platform .NET framework for building modern cloud-based web
+    applications on Windows, Mac, or Linux
+  website_url: docs.microsoft.com/en-us/aspnet/core/
+  version: '3.1'
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/11331/asp.net-core.png
+  detection_source_url: samples/DesignTimeSample/DesignTimeSample.csproj
+  detection_source: tests/Test/TextTemplating.Test.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 16:18:57.000000000 Z
+- name: Node.js
+  description: A platform built on Chrome's JavaScript runtime for easily building
+    fast, scalable network applications
+  website_url: http://nodejs.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2021-01-29 11:09:03.000000000 Z
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2021-01-29 11:09:03.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: Mocha
+  description: Simple, flexible, fun javascript test framework for node.js &amp; the
+    browser
+  website_url: http://mochajs.org/
+  version: 8.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/832/mocha.png
+  detection_source_url: src/vsextention/texttemplating/package-lock.json
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: Moq
+  description: The most popular and friendly mocking framework for .NET
+  website_url: https://github.com/Moq/moq4
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/1628/1434934.png
+  detection_source: tests/Test/TextTemplating.Test.csproj
+  last_updated_by: Zhu Tao
+  last_updated_on: 2017-08-18 03:15:36.000000000 Z
+- name: NuGet
+  description: The package manager for .NET
+  website_url: https://www.nuget.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/2637/6I3oEOP4_400x400.jpg
+  detection_source: tests/Test/TextTemplating.Test.csproj
+  last_updated_by: Zhu Tao
+  last_updated_on: 2017-08-18 03:15:36.000000000 Z
+- name: Roslyn
+  description: Open-source C# and Visual Basic compilers with rich code analysis APIs
+  website_url: https://github.com/dotnet/roslyn
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/20930/default_275fb27c037c57f3394917ebca90dc2465c97ed8.png
+  detection_source: src/TextTemplating.Cli/TextTemplating.Tool.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 13:04:23.000000000 Z
+- name: Visual Studio
+  description: State-of-the-art tools and services that you can use to create great
+    apps for devices, the cloud, and everything in between.
+  website_url: http://msdn.microsoft.com/en-us/vstudio/aa718325.aspx
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Integrated Development Environment
+  image_url: https://img.stackshare.io/service/1451/SR2hUhQN.png
+  detection_source: TextTemplating.sln
+  last_updated_by: Zhu Tao
+  last_updated_on: 2017-09-14 16:23:34.000000000 Z
+- name: Webpack
+  description: A bundler for javascript and friends
+  website_url: http://webpack.js.org
+  version: 5.18.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/1682/IMG_4636.PNG
+  detection_source_url: src/vsextention/texttemplating/package-lock.json
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2021-01-29 11:09:03.000000000 Z
+- name: xUnit
+  description: An open source, community-focused unit testing tool
+  website_url: http://xunit.github.io/
+  version: 2.3.1
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/3077/ca5a327feb49ddfe1f4b11548907e5a1_400x400.png
+  detection_source_url: tests/Test/TextTemplating.Test.csproj
+  detection_source: tests/Test/TextTemplating.Test.csproj
+  last_updated_by: Zhu Tao
+  last_updated_on: 2017-08-18 03:15:36.000000000 Z
+- name: FluentAssertions
+  description: A very extensive set of extension methods that allow you to more naturally
+    specify the expected outcome of a TDD or BDD-style unit tests
+  package_url: https://www.nuget.org/FluentAssertions
+  version: 5.4.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13059/default_ed36ff3c005af695725e05bb15ea5b1f03de31f3.png
+  detection_source_url: tests/Test/TextTemplating.Test.csproj
+  detection_source: tests/Test/TextTemplating.Test.csproj
+  last_updated_by: Jerry
+  last_updated_on: 2018-06-26 15:22:28.000000000 Z
+- name: Microsoft.AspNetCore.Mvc.ApiExplorer
+  description: ASP.NET Core MVC API explorer functionality for discovering metadata
+    such as the list of controllers and actions, and their URLs and allowed HTTP methods
+  package_url: https://www.nuget.org/Microsoft.AspNetCore.Mvc.ApiExplorer
+  version: 2.1.1
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13601/default_2fed3dd41a57ad03758b88d7d49dbbc498986493.png
+  detection_source_url: samples/RuntimeTemplateSample/RuntimeTemplateSample.csproj
+  detection_source: samples/RuntimeTemplateSample/RuntimeTemplateSample.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2020-11-21 12:46:27.000000000 Z
+- name: Microsoft.CodeAnalysis
+  description: ".NET Compiler Platform"
+  package_url: https://www.nuget.org/Microsoft.CodeAnalysis
+  version: 4.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13228/default_44258eb565a346d4baf5243c0df2a219253fec1a.png
+  detection_source_url: src/TextTemplating.Cli/TextTemplating.Tool.csproj
+  detection_source: src/TextTemplating.Cli/TextTemplating.Tool.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 12:45:08.000000000 Z
+- name: Microsoft.CodeAnalysis.CSharp
+  description: ".NET Compiler Platform"
+  package_url: https://www.nuget.org/Microsoft.CodeAnalysis.CSharp
+  version: 4.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12967/default_bd8397841d0aa5de035298a9130ee2dc9d9b0ece.png
+  detection_source_url: src/TextTemplating/TextTemplating.csproj
+  detection_source: src/TextTemplating/TextTemplating.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: Microsoft.CodeAnalysis.CSharp.Scripting
+  description: Microsoft .NET Compiler Platform
+  package_url: https://www.nuget.org/Microsoft.CodeAnalysis.CSharp.Scripting
+  version: 4.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13259/default_0e6336285a2ac0713cff413264705f5aa2f348a1.png
+  detection_source_url: src/TextTemplating.Cli/TextTemplating.Tool.csproj
+  detection_source: src/TextTemplating/TextTemplating.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 16:00:58.000000000 Z
+- name: Microsoft.CodeAnalysis.CSharp.Workspaces
+  description: ".NET Compiler Platform"
+  package_url: https://www.nuget.org/Microsoft.CodeAnalysis.CSharp.Workspaces
+  version: 4.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13136/default_8ec8443385d582f19f93b79f0dcf69f422e58967.png
+  detection_source_url: src/TextTemplating/TextTemplating.csproj
+  detection_source: src/TextTemplating/TextTemplating.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: Microsoft.Extensions.CommandLineUtils
+  description: Command-line parsing API
+  package_url: https://www.nuget.org/Microsoft.Extensions.CommandLineUtils
+  version: 1.1.1
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13307/default_1e1f93823dcbf467a805adfd578c74f8f54c6a4e.png
+  detection_source_url: src/TextTemplating.Cli/TextTemplating.Tool.csproj
+  detection_source: src/TextTemplating/TextTemplating.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-21 19:16:29.000000000 Z
+- name: Microsoft.Extensions.DependencyInjection
+  description: Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection
+  package_url: https://www.nuget.org/Microsoft.Extensions.DependencyInjection
+  version: 7.0.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/12846/default_0f5233770e71818507f2339042e7e61bef904e70.png
+  detection_source_url: src/TextTemplating.Cli/TextTemplating.Tool.csproj
+  detection_source: src/TextTemplating.Cli/TextTemplating.Tool.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-21 19:16:29.000000000 Z
+- name: Microsoft.Extensions.PlatformAbstractions
+  description: Abstractions that unify behavior and API across .NET Framework
+  package_url: https://www.nuget.org/Microsoft.Extensions.PlatformAbstractions
+  version: 1.1.0
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13040/default_ed36ff3c005af695725e05bb15ea5b1f03de31f3.png
+  detection_source_url: src/TextTemplating/TextTemplating.csproj
+  detection_source: src/TextTemplating/TextTemplating.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-21 19:16:29.000000000 Z
+- name: Newtonsoft.Json
+  description: Json.NET is a popular high-performance JSON framework for .NET
+  package_url: https://www.nuget.org/Newtonsoft.Json
+  version: 11.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/nuget/image.png
+  detection_source_url: samples/DesignTimeSample/DesignTimeSample.csproj
+  detection_source: samples/DesignTimeSample/DesignTimeSample.csproj
+  last_updated_by: jacknq
+  last_updated_on: 2021-01-30 11:41:06.000000000 Z
+  vulnerabilities:
+  - name: Improper Handling of Exceptional Conditions in Newtonsoft.Json
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-5crp-9r3c-p9vr
+    detected_date: Jun 23
+    severity: high
+    first_patched: 13.0.1
+- name: xunit.runner.visualstudio
+  description: Visual Studio 2012+ Test Explorer runner for the xUnit.net framework
+  package_url: https://www.nuget.org/xunit.runner.visualstudio
+  version: 2.3.1
+  license: Other
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: NuGet Packages
+  image_url: https://img.stackshare.io/package/13260/default_d2db5a200c4fe2d08cbdb2174cc230708973870b.png
+  detection_source_url: tests/Test/TextTemplating.Test.csproj
+  detection_source: tests/Test/TextTemplating.Test.csproj
+  last_updated_by: Jerry
+  last_updated_on: 2018-06-26 15:22:28.000000000 Z
+- name: "@types/glob"
+  description: TypeScript definitions for Glob
+  package_url: https://www.npmjs.com/@types/glob
+  version: 7.1.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16391/default_fc6e1fc17e404d936593b5b901d67abb3386daa3.png
+  detection_source_url: src/vsextention/texttemplating/package-lock.json
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: "@types/mocha"
+  description: TypeScript definitions for mocha
+  package_url: https://www.npmjs.com/@types/mocha
+  version: 8.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15893/default_1d65e37e65b7f80761374f0202776043277d505d.png
+  detection_source_url: src/vsextention/texttemplating/package-lock.json
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: "@types/node"
+  description: TypeScript definitions for Node.js
+  package_url: https://www.npmjs.com/@types/node
+  version: 12.19.15
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
+  detection_source_url: src/vsextention/texttemplating/package-lock.json
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: "@typescript-eslint/eslint-plugin"
+  description: TypeScript plugin for ESLint
+  package_url: https://www.npmjs.com/@typescript-eslint/eslint-plugin
+  version: 4.14.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15982/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: src/vsextention/texttemplating/package-lock.json
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: "@typescript-eslint/parser"
+  description: An ESLint custom parser which leverages TypeScript ESTree
+  package_url: https://www.npmjs.com/@typescript-eslint/parser
+  version: 4.14.1
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15980/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: src/vsextention/texttemplating/package-lock.json
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: glob
+  description: A little globber
+  package_url: https://www.npmjs.com/glob
+  version: 7.1.6
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15875/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: src/vsextention/texttemplating/package-lock.json
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: ts-loader
+  description: TypeScript loader for webpack
+  package_url: https://www.npmjs.com/ts-loader
+  version: 8.0.14
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15938/default_e0a4fb1126d7400f419f0931cf1669947a5bc552.png
+  detection_source_url: src/vsextention/texttemplating/package-lock.json
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
+- name: webpack-cli
+  description: CLI for webpack &amp; friends
+  package_url: https://www.npmjs.com/webpack-cli
+  version: 4.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15826/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: src/vsextention/texttemplating/package-lock.json
+  detection_source: src/vsextention/texttemplating/package.json
+  last_updated_by: jacknq
+  last_updated_on: 2023-02-12 11:53:01.000000000 Z
