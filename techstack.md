@@ -54,7 +54,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [Jacknq/TextTemplatingCore](https://github.com/Jacknq/TextTemplatingCore)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|38<br/>Tools used|12/14/23 <br/>Report generated|
+|38<br/>Tools used|01/04/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -253,7 +253,7 @@ Full tech stack [here](/techstack.md)
 |[Microsoft.Extensions.CommandLineUtils](https://www.nuget.org/Microsoft.Extensions.CommandLineUtils)|v1.1.1|02/21/23|jacknq |N/A|N/A|
 |[Microsoft.Extensions.DependencyInjection](https://www.nuget.org/Microsoft.Extensions.DependencyInjection)|v7.0.0|02/21/23|jacknq |Apache-2.0|N/A|
 |[Microsoft.Extensions.PlatformAbstractions](https://www.nuget.org/Microsoft.Extensions.PlatformAbstractions)|v1.1.0|02/21/23|jacknq |N/A|N/A|
-|[Newtonsoft.Json](https://www.nuget.org/Newtonsoft.Json)|v11.0.2|01/30/21|jacknq |MIT|[](https://github.com/advisories/GHSA-5crp-9r3c-p9vr) (High)|
+|[Newtonsoft.Json](https://www.nuget.org/Newtonsoft.Json)|v11.0.2|01/30/21|jacknq |MIT|[](https://github.com/advisories/GHSA-8rfx-6mr3-5jh3) (High)<br/>[CVE-2024-21907](https://github.com/advisories/GHSA-5crp-9r3c-p9vr) (High)|
 |[xunit.runner.visualstudio](https://www.nuget.org/xunit.runner.visualstudio)|v2.3.1|06/26/18|Jerry |Other|N/A|
 
 
