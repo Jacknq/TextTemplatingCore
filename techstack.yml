@@ -1,7 +1,8 @@
 repo_name: Jacknq/TextTemplatingCore
-report_id: afc73578b6cefe25d0d2c861f60ecb87
+report_id: cd929e90c73c4d6db023f9793ee4d9d7
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-14T09:39:31+00:00'
+timestamp: '2024-01-04T15:01:51+00:00'
 requested_by: Jacknq
 provider: github
 branch: master
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1015/1200px-C_Sharp_wordmark.svg.png
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -26,6 +28,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore
   detection_source: Repo Metadata
 - name: TypeScript
   description: A superset of JavaScript that compiles to clean JavaScript output
@@ -36,6 +39,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore
   detection_source: Repo Metadata
 - name: ".NET"
   description: A free, cross-platform, open source developer platform for building
@@ -47,6 +51,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1014/IoPy1dce_400x400.png
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore/blob/master/tests/Test/TextTemplating.Test.csproj
   detection_source: tests/Test/TextTemplating.Test.csproj
   last_updated_by: Jerry
   last_updated_on: 2018-06-26 15:22:28.000000000 Z
@@ -89,6 +94,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore/blob/master/src/vsextention/texttemplating/package.json
   detection_source: src/vsextention/texttemplating/package.json
   last_updated_by: jacknq
   last_updated_on: 2021-01-29 11:09:03.000000000 Z
@@ -100,6 +106,7 @@ tools:
   category: Data Stores
   sub_category: Database Tools
   image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore/blob/master/LICENSE.txt
   detection_source: LICENSE.txt
   last_updated_by: Zhu Tao
   last_updated_on: 2017-08-18 03:15:36.000000000 Z
@@ -112,6 +119,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore/blob/master/src/vsextention/texttemplating/package.json
   detection_source: src/vsextention/texttemplating/package.json
   last_updated_by: jacknq
   last_updated_on: 2021-01-29 11:09:03.000000000 Z
@@ -123,6 +131,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore
   detection_source: Repo Metadata
 - name: Mocha
   description: Simple, flexible, fun javascript test framework for node.js &amp; the
@@ -147,6 +156,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Testing Frameworks
   image_url: https://img.stackshare.io/service/1628/1434934.png
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore/blob/master/tests/Test/TextTemplating.Test.csproj
   detection_source: tests/Test/TextTemplating.Test.csproj
   last_updated_by: Zhu Tao
   last_updated_on: 2017-08-18 03:15:36.000000000 Z
@@ -158,6 +168,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/service/2637/6I3oEOP4_400x400.jpg
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore/blob/master/tests/Test/TextTemplating.Test.csproj
   detection_source: tests/Test/TextTemplating.Test.csproj
   last_updated_by: Zhu Tao
   last_updated_on: 2017-08-18 03:15:36.000000000 Z
@@ -170,6 +181,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/20930/default_275fb27c037c57f3394917ebca90dc2465c97ed8.png
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore/blob/master/src/TextTemplating.Cli/TextTemplating.Tool.csproj
   detection_source: src/TextTemplating.Cli/TextTemplating.Tool.csproj
   last_updated_by: jacknq
   last_updated_on: 2023-02-12 13:04:23.000000000 Z
@@ -182,6 +194,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Integrated Development Environment
   image_url: https://img.stackshare.io/service/1451/SR2hUhQN.png
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore/blob/master/TextTemplating.sln
   detection_source: TextTemplating.sln
   last_updated_by: Zhu Tao
   last_updated_on: 2017-09-14 16:23:34.000000000 Z
@@ -207,6 +220,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore/blob/master/src/vsextention/texttemplating/package.json
   detection_source: src/vsextention/texttemplating/package.json
   last_updated_by: jacknq
   last_updated_on: 2021-01-29 11:09:03.000000000 Z
@@ -231,6 +245,7 @@ tools:
   category: Communications
   sub_category: Large Language Model Tools
   image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/Jacknq/TextTemplatingCore/blob/master/LICENSE.txt
   detection_source: LICENSE.txt
   last_updated_by: Zhu Tao
   last_updated_on: 2017-08-18 03:15:36.000000000 Z
@@ -374,8 +389,14 @@ tools:
   last_updated_by: jacknq
   last_updated_on: 2021-01-30 11:41:06.000000000 Z
   vulnerabilities:
-  - name: Improper Handling of Exceptional Conditions in Newtonsoft.Json
+  - name: 'Duplicate Advisory: Improper Handling of Exceptional Conditions in Newtonsoft.Json'
     cve_id: 
+    cve_url: https://github.com/advisories/GHSA-8rfx-6mr3-5jh3
+    detected_date: Jan 4
+    severity: high
+    first_patched: 13.0.1
+  - name: Improper Handling of Exceptional Conditions in Newtonsoft.Json
+    cve_id: CVE-2024-21907
     cve_url: https://github.com/advisories/GHSA-5crp-9r3c-p9vr
     detected_date: Jun 23
     severity: high
