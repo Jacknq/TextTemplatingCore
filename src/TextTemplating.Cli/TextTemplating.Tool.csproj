@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 	<PropertyGroup>
-		<TargetFrameworks>netcoreapp3.1;net6.0;net7.0</TargetFrameworks>
+		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 		<Version>5.0.1.27</Version>
     <Authors>Jacknq</Authors>
     <Description>Latest version supports .netcore 7.0, 6.0
@@ -50,8 +50,8 @@ VSCODE Extension
   </ItemGroup>
   <ItemGroup>
 		<!-- <PackageReference Include="TextTemplating.Core" Version="5.0.0.0" /> -->
-		<PackageReference Include="Microsoft.CodeAnalysis" Version="4.4.0" />
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.4.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis" Version="4.8.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.8.0" />
 		<PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
 		<PackageReference Include="TextTemplating.Core" Version="5.0.0" /> 

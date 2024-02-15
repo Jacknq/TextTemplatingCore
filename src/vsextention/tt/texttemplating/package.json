@@ -1,0 +1,47 @@
+{
+  "name": "TextTemplating",
+  "displayName": "texttemplating",
+  "publisher": "jacknq",
+  "repository": "https://github.com/Jacknq/TextTemplatingCore",
+  "description": "CSX (cs script) and T4 executions",
+  "version": "0.20.4",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "tt.helloWorld",
+      "title": "tt: Execute"
+  }],
+  "menus": {
+      "explorer/context": [{
+          "when": "resourceFilename =~ /(.*\\.csx)|(.*\\.tt)$/",
+          "command": "tt.helloWorld"
+      }]
+  }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.72.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
