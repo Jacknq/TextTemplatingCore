@@ -11,10 +11,13 @@ using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.CodeAnalysis.Scripting.Hosting;
 using TextTemplating.T4.Parsing;
 using TextTemplating.T4.Preprocessing;
+//using Microsoft.CodeAnalysis.CSharp.Scripting.Compilers;
+using System.Text.RegularExpressions;
+
 
 namespace TextTemplating.Infrastructure
 {
-    public class Engine
+    public partial class Engine
     {
         private readonly ITextTemplatingEngineHost _host;
         private readonly RoslynCompilationService _compilationService;
@@ -73,6 +76,63 @@ namespace TextTemplating.Infrastructure
             return transformation.TransformText();
         }
 
+        public string CSX_Script(string content, string filePath)
+        {
+            // Read script content
+            string scriptContent = File.ReadAllText(filePath);
+
+            // Get references based on using statements
+            string[] references = GetScriptReferences(scriptContent, filePath);
+            var opt =
+                    ScriptOptions.Default
+                    .WithReferences(references)
+                      .WithReferences(_host.StandardAssemblyReferences)
+                      .AddReferences(Assembly.GetExecutingAssembly())
+                      .WithMetadataResolver(ScriptMetadataResolver.Default.WithSearchPaths(RuntimeEnvironment.GetRuntimeDirectory()))
+                      //   .AddImports(_host.StandardImports) //no standard imports
+                      .WithFilePath(filePath);
+            // Use Script instead of CSharpScript
+            var script = CSharpScript.Create(
+                scriptContent,
+             //   globals: Assembly.GetExecutingAssembly(), // Add current assembly as a reference
+             //   references: references.Select(r => MetadataReference.CreateFromFile(r)).ToArray(),
+                options: opt );
+                   //  { OutputKind = OutputKind.Dynamic, ScriptingFilePath = scriptPath });
+
+            // Execute script and get results
+           var loader = new InteractiveAssemblyLoader();
+            try
+            {
+                 CSharpScript.EvaluateAsync(content, options: opt, loader)
+                .ContinueWith(s => s.Result).Wait();
+            }
+            catch (CompilationErrorException ex)
+            {
+                if (ex.Message.Contains(")"))
+                {
+                    var m = ex.Message.Split(")");
+                    ttConsole.WriteError(m[0] + ")");
+                    ttConsole.WriteError(m[1]);
+                }
+                else { ttConsole.WriteError(ex.Message); }
+                ttConsole.WriteNormal("");
+                ttConsole.WriteError(ex.StackTrace);
+            }        
+               return "";            
+        }
+
+        private static string[] GetScriptReferences(string scriptContent, string scriptPath)
+        {
+            // Extract using statements using regex
+            var regex = new Regex(@"using\s+([^\s;]+);", RegexOptions.Multiline);
+            var matches = regex.Matches(scriptContent);
+
+            // Get reference paths for each using statement
+            string[] references = matches.Select(m => Path.Combine(Path.GetDirectoryName(scriptPath), m.Groups[1].Value + ".dll"))
+                                        .Where(File.Exists).ToArray();
+
+            return references;
+        }
         string output = "";
         public string ProcessCSXTemplate(string content, string filePath,
         IMetadataResolveable resolver, ProjectMetadata projmeta)
@@ -112,15 +172,20 @@ namespace TextTemplating.Infrastructure
             catch (CompilationErrorException ex)
             {
                 if (ex.Message.Contains(")"))
-                {   var m = ex.Message.Split(")");
+                {
+                    var m = ex.Message.Split(")");
                     ttConsole.WriteError(m[0] + ")");
-                    ttConsole.WriteError(m[1]); 
-                }else{ ttConsole.WriteError(ex.Message);}
+                    ttConsole.WriteError(m[1]);
+                }
+                else { ttConsole.WriteError(ex.Message); }
                 ttConsole.WriteNormal("");
                 ttConsole.WriteError(ex.StackTrace);
             }
             return "";
         }
+
+        [GeneratedRegex("using\\s+([^\\s;]+);", RegexOptions.Multiline)]
+        private static partial Regex MyRegex();
 
         // string r = @"(?:^|\n)(\s*(:?using))\s+((?<attribute>\w*(:?\.)*\w*));";
 

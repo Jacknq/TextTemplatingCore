@@ -53,7 +53,7 @@ namespace TextTemplating.Tools
                 var outputPath = Path.Combine(Environment.CurrentDirectory, outputOption.Value() ?? fileName + ".cs");
                 if (TryFindProjectFile(filePath, out string projectFile) == false)
                 {
-                    throw new ProjectNotFoundException("Current work directory is not in a project directory");
+                    // throw new ProjectNotFoundException("Current work directory is not in a project directory");
                 }
 
                 // Resolve metadata
@@ -62,13 +62,13 @@ namespace TextTemplating.Tools
 
 
                 string className = classNameOption.Value() ?? Path.GetFileName(fileName);
-                string namespaceName = namespaceNameOption.Value() ?? metadata.RootNamespace ?? "GeneratedNameSpace";
+                string namespaceName = namespaceNameOption.Value() ?? metadata?.RootNamespace ?? "GeneratedNameSpace";
 
                 return PreprocessTemplate(filePath, outputPath, className, namespaceName);
             });
         }
 
-      
+
 
         /// <summary>
         /// conversion template
@@ -102,7 +102,7 @@ namespace TextTemplating.Tools
                 var filePath = Path.Combine(Environment.CurrentDirectory, fileOption.Value());
                 if (TryFindProjectFile(filePath, out string projectFile) == false)
                 {
-                    throw new ProjectNotFoundException("Current work directory is not in a project directory");
+                    throw new ProjectNotFoundException("Current work directory is not in a project directory..");
                 }
 
                 // Resolve metadata
@@ -111,7 +111,7 @@ namespace TextTemplating.Tools
 
                 return TransformTemplate(filePath);
             });
-        }      
+        }
 
         static int TransformTemplate(string filePath)
         {
@@ -126,14 +126,14 @@ namespace TextTemplating.Tools
             return 0;
         }
 
-//new stuff
+        //new stuff
         public static int ProcessTTFile(string path)
         {
-           // Console.WriteLine("ProcessTTFile");
+            // Console.WriteLine("ProcessTTFile");
             var filePath = Path.Combine(Environment.CurrentDirectory, path);
             if (TryFindProjectFile(filePath, out string projectFile) == false)
             {
-                throw new ProjectNotFoundException("Current work directory is not in a project directory");
+                throw new ProjectNotFoundException("Current work directory is not in a project directory.");
             }
 
             // Resolve metadata
@@ -144,35 +144,37 @@ namespace TextTemplating.Tools
         }
 
         public static int ProcessCSXFile(string path)
-        {  
+        {
             var engin = Program.DI.GetService<Engine>();
             var filePath2 = Path.Combine(Environment.CurrentDirectory, path);
-            if(File.Exists(filePath2))
+            if (File.Exists(filePath2))
             {
-            var templateContent = File.ReadAllText(filePath2);
-           
-            if (TryFindProjectFile(filePath2, out string projectFile) == false)
-            {
-                throw new ProjectNotFoundException("Current work directory is not in a project directory");
-            }
-            var host = Program.DI.GetService<ITextTemplatingEngineHost>();
-           // Console.WriteLine("proj>>"+projectFile);
+                var templateContent = File.ReadAllText(filePath2);
+
+                if (TryFindProjectFile(filePath2, out string projectFile) == false)
+                { //simple execution no project file
+                    var result1 = engin.CSX_Script(templateContent, filePath2);
+                    return 0;
+                    //  throw new ProjectNotFoundException("Current work directory is not in a project directory");
+                }
+                var host = Program.DI.GetService<ITextTemplatingEngineHost>();
+                // Console.WriteLine("proj>>"+projectFile);
                 // Resolve metadata
-            IMetadataResolveable resolver = Program.DI.GetService<IMetadataResolveable>();
-            ProjectMetadata projMetadata = resolver.ReadProject(projectFile);
-            //Console.WriteLine("proj.meta>>"+projMetadata.OutputPath);
-            
-            var scriptCode = File.ReadAllText(filePath2);
-            var result = engin.ProcessCSXTemplate(templateContent, filePath2, 
-            resolver, projMetadata);
-            
-            // var outputPath = Path.Combine(
-            //     Path.GetDirectoryName(filePath),
-            //     $"{Path.GetFileNameWithoutExtension(filePath)}{host.FileExtension}");
-            // File.WriteAllText(outputPath, result, host.Encoding);
+                IMetadataResolveable resolver = Program.DI.GetService<IMetadataResolveable>();
+                ProjectMetadata projMetadata = resolver.ReadProject(projectFile);
+                //Console.WriteLine("proj.meta>>"+projMetadata.OutputPath);
+
+                // var scriptCode = File.ReadAllText(filePath2);
+                var result = engin.ProcessCSXTemplate(templateContent, filePath2,
+                resolver, projMetadata);
+
+                // var outputPath = Path.Combine(
+                //     Path.GetDirectoryName(filePath),
+                //     $"{Path.GetFileNameWithoutExtension(filePath)}{host.FileExtension}");
+                // File.WriteAllText(outputPath, result, host.Encoding);
             }
-             
-           return 0;
+
+            return 0;
         }
 
         #endregion

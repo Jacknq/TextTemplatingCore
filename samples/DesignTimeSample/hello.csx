@@ -7,6 +7,7 @@ using System.Reflection;
 using TextTemplating;
 using Newtonsoft.Json;
 using DesignTimeSample;
+using Internal;
 
 //referenced namespace usage
 ttConsole.WriteHighlighted("somethin");

@@ -34,8 +34,7 @@ namespace TextTemplating.Infrastructure
             "System.Linq.Expressions",
              "System.Linq.Parallel",
              "System.Data",
-             "System.Data.DataSetExtensions",
-             "System.Runtime",
+             "System.Data.DataSetExtensions",           
             "System.Dynamic",
             "System.Runtime"
             ,"System.Reflection"

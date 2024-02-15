@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 	<PropertyGroup>
-		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
-		<Version>5.0.1.27</Version>
+		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+		<Version>5.0.1.31</Version>
     <Authors>Jacknq</Authors>
-    <Description>Latest version supports .netcore 7.0, 6.0
+    <Description>Latest version supports .netcore 7+
 
 	CSX and T4 scaffolding for .NET Core without IDE, 
     execute or transform .csx or .tt files from your command line or runtime, based on roslyn, no 3rdparty dependencies.

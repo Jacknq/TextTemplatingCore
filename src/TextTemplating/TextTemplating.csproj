@@ -2,11 +2,11 @@
   <PropertyGroup>
     <Description>T4 and CSX scaffolding for .NET Core without IDE, Library for TextTemplating.Tool package and runtime</Description>
     <Authors>Jacknq</Authors>
-    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
     <AssemblyName>TextTemplating.Core</AssemblyName>
     <PackageId>TextTemplating.Core</PackageId>
     <PackageTags>CSX T4 TextTemplating netcore</PackageTags>    
-    <Version>5.0.0.6</Version>
+    <Version>5.0.0.8</Version>
     <PackageProjectUrl>https://github.com/Jacknq/TextTemplatingCore</PackageProjectUrl>
     <PackageLicense>http://www.opensource.org/licenses/MIT</PackageLicense>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>    
