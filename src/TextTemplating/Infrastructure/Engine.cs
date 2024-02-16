@@ -13,7 +13,6 @@ using TextTemplating.T4.Parsing;
 using TextTemplating.T4.Preprocessing;
 //using Microsoft.CodeAnalysis.CSharp.Scripting.Compilers;
 using System.Text.RegularExpressions;
-using Microsoft.Extensions.DependencyModel;
 
 namespace TextTemplating.Infrastructure
 {

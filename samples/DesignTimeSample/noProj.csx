@@ -1,14 +1,15 @@
-//to test this file rename designtimesaple.csproj to *.bak
-//#r "Newtonsoft.Json"
+// #i "nuget:https://api.nuget.org/v3/index.json"
+// #r "nuget:Newtonsoft.Json"
 //#r "TextTemplating.Tool"
 //css_nuget -ng restore Newtonsoft.Json
+//to test this file rename designtimesaple.csproj to *.bak
 using System.Diagnostics;
 using System;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
 using TextTemplating;
-//using Newtonsoft.Json;
+using Newtonsoft.Json;
 new Thread(() => 
 {
     Thread.CurrentThread.IsBackground = true; 

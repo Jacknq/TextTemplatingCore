@@ -28,6 +28,7 @@ namespace TextTemplating.Infrastructure
             "mscorlib",
            // "netstandard",
             "System",
+            "System.Console",
             "System.Core",
             "System.Linq",
             "System.Linq.Queryable",
