@@ -1,3 +1,4 @@
+//to test this file rename designtimesaple.scproj to *.bak
 //#r "Newtonsoft.Json"
 //#r "TextTemplating.Tool"
 //css_nuget -ng restore Newtonsoft.Json
