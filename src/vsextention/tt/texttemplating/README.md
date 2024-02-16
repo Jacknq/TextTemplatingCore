@@ -21,6 +21,11 @@ Generate **any** text, **any** code or script template, **any** language from yo
 ## Requirements
  1) Install .NET SDK 7+ or higher  https://dotnet.microsoft.com/download/dotnet-core
  2) Install textemplating tool 
+
+### create manifest file
+```
+dotnet new tool-manifest
+``` 
  ### Install locally - inside project folder
 ```
 dotnet tool install TextTemplating.Tool
