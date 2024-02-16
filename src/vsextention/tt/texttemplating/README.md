@@ -38,12 +38,19 @@ Add nuget package to csproj, if used with cs project
 
 ### Usage 
 transform template on the fly
-```
+```bash
+#locally
 dotnet tt hello.csx
 dotnet tt Person.tt
+#globally 
+tt hello.csx
+tt Person.tt
 
-
- or 
+# or 
  
 dotnet tt trans -f Person.tt
 ```
+Now you can use the `dotnet tt` command as a command line tool locally 
+or just call `tt` globally to transform templates at design-time, with the specified command line arguments.
+## How to Use
+Run `dotnet tt -h` to see the usage.
