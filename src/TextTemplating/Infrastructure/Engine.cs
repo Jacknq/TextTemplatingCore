@@ -13,7 +13,7 @@ using TextTemplating.T4.Parsing;
 using TextTemplating.T4.Preprocessing;
 //using Microsoft.CodeAnalysis.CSharp.Scripting.Compilers;
 using System.Text.RegularExpressions;
-
+using Microsoft.Extensions.DependencyModel;
 
 namespace TextTemplating.Infrastructure
 {
@@ -94,17 +94,17 @@ namespace TextTemplating.Infrastructure
             // Use Script instead of CSharpScript
             var script = CSharpScript.Create(
                 scriptContent,
-             //   globals: Assembly.GetExecutingAssembly(), // Add current assembly as a reference
-             //   references: references.Select(r => MetadataReference.CreateFromFile(r)).ToArray(),
-                options: opt );
-                   //  { OutputKind = OutputKind.Dynamic, ScriptingFilePath = scriptPath });
+                //   globals: Assembly.GetExecutingAssembly(), // Add current assembly as a reference
+                //   references: references.Select(r => MetadataReference.CreateFromFile(r)).ToArray(),
+                options: opt);
+            //  { OutputKind = OutputKind.Dynamic, ScriptingFilePath = scriptPath });
 
             // Execute script and get results
-           var loader = new InteractiveAssemblyLoader();
+            var loader = new InteractiveAssemblyLoader();
             try
             {
-                 CSharpScript.EvaluateAsync(content, options: opt, loader)
-                .ContinueWith(s => s.Result).Wait();
+                CSharpScript.EvaluateAsync(content, options: opt, loader)
+               .ContinueWith(s => s.Result).Wait();
             }
             catch (CompilationErrorException ex)
             {
@@ -117,8 +117,8 @@ namespace TextTemplating.Infrastructure
                 else { ttConsole.WriteError(ex.Message); }
                 ttConsole.WriteNormal("");
                 ttConsole.WriteError(ex.StackTrace);
-            }        
-               return "";            
+            }
+            return "";
         }
 
         private static string[] GetScriptReferences(string scriptContent, string scriptPath)
@@ -130,9 +130,38 @@ namespace TextTemplating.Infrastructure
             // Get reference paths for each using statement
             string[] references = matches.Select(m => Path.Combine(Path.GetDirectoryName(scriptPath), m.Groups[1].Value + ".dll"))
                                         .Where(File.Exists).ToArray();
-
-            return references;
+            List<string> netVer = new() { "net8.0\\", "net7.0\\" };
+            netVer.ForEach(ver =>
+            {
+                references = references.Concat(matches.Select(m => Path.Combine(Path.GetDirectoryName(scriptPath) + "\\bin\\Release\\" + ver, m.Groups[1].Value + ".dll"))
+                                            .Where(File.Exists).ToArray()).ToArray();
+                references = references.Concat(matches.Select(m => Path.Combine(Path.GetDirectoryName(scriptPath) + "\\bin\\Debug\\" + ver, m.Groups[1].Value + ".dll"))
+                .Where(File.Exists).ToArray()).ToArray();
+            });
+            var res = references.Distinct().ToArray();
+           // Console.WriteLine("rref length:" + res.Length + " ");
+           // res.ToList().ForEach(x => Console.WriteLine(x));
+            return res;
         }
+        // private static MetadataReference[] ResolveNuGetReferences(string[] references)
+        // {
+        //     // Create a temporary workspace for NuGet package resolution
+        //     var workspace = MSBuildWorkspace.Create();
+
+        //     // Create a temporary project for package resolution
+        //     var project = workspace.AddProject("ScriptProject", "1.0.0", "net8.0");
+        //     foreach (var reference in references)
+        //     {
+        //         // Example: "Newtonsoft.Json"
+        //         project.AddPackageReference(reference);
+        //     }
+
+        //     // Restore NuGet packages
+        //     workspace.RestorePackagesAsync().Wait();
+
+        //     // Get resolved references
+        //     return project.References.ToArray();
+        // }
         string output = "";
         public string ProcessCSXTemplate(string content, string filePath,
         IMetadataResolveable resolver, ProjectMetadata projmeta)

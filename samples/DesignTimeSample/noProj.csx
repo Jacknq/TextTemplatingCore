@@ -1,5 +1,6 @@
 //#r "Newtonsoft.Json"
 //#r "TextTemplating.Tool"
+//css_nuget -ng restore Newtonsoft.Json
 using System.Diagnostics;
 using System;
 using System.Linq;
