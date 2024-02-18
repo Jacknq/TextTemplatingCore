@@ -65,13 +65,16 @@ namespace TextTemplating.Tools
             }
         }
 
+        private static readonly string[] SupportedFileTypes = new[] {"tt","csx"};
+
         private static int ProcessFile(string[] args)
         {         
             if (args.Length == 1 &&
-                isSuppFile(args[0], new[] {"tt","csx"}))
+                isSuppFile(args[0], SupportedFileTypes))
             {   var f = args[0];
                 ttConsole.WriteNormal("Executing file: " + f);
-                if (f.EndsWith(".tt")) { return AppCommands.ProcessTTFile(f); }
+                if (f.EndsWith(".tt"))
+                { return AppCommands.ProcessTTFile(f); }
                 return AppCommands.ProcessCSXFile(f); 
             }
             return 0;
