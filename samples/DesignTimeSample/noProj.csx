@@ -9,7 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using TextTemplating;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
 new Thread(() => 
 {
     Thread.CurrentThread.IsBackground = true; 
