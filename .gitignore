@@ -261,3 +261,9 @@ __pycache__/
 *.pyc
 
 *.tt.cs
+nugetpackages/
+samples/DesignTimeSample/.cassandraWorkbench/history.json
+samples/DesignTimeSample/.vscode/settings.json
+samples/DesignTimeSample/.cassandraWorkbench.jsonc
+src/vsextention/tt/texttemplating/.vscode-test/
+src/TextTemplating.Cli/lib/
