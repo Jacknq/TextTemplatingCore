@@ -28,3 +28,6 @@ var d = new DPerson() { Name = "Test Person" };
 Console.WriteLine(d.Name);
 var asm = System.AppDomain.CurrentDomain.GetAssemblies();
 Console.WriteLine($"app domain assemblies: {asm.Count()}");
+string jsonString = JsonConvert.SerializeObject(d, Formatting.Indented);
+Console.WriteLine("Serialized JSON:");
+Console.WriteLine(jsonString);
