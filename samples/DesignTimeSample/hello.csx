@@ -1,13 +1,15 @@
-//#r "Newtonsoft.Json"
-//#r "TextTemplating.Tool"
+//#load "./program.cs" //cannot use namespace comment it
+//#r "bin/Debug/net8.0/DesignTimeSample.dll" //build this project first
+#r "nuget:Newtonsoft.Json,13.0.4" //nuget reference
+using DesignTimeSample;
 using System.Diagnostics;
 using System;
 using System.Linq;
 using System.Reflection;
 using TextTemplating;
 using Newtonsoft.Json;
-using DesignTimeSample;
 using Internal;
+using Console = System.Console;
 
 //referenced namespace usage
 ttConsole.WriteHighlighted("somethin");

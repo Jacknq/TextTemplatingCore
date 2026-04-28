@@ -1,0 +1,18 @@
+{
+    "RoslynExtensionsOptions": {
+        "enableAnalyzersSupport": true,
+        "enableImportCompletion": true,
+        "enableDecompilationSupport": true
+    },
+    "MSBuild": {
+        "UseLegacySdkResolver":false
+    },
+    "FormattingOptions": {
+        "OrganizeImports": true
+    },
+    "RenameOptions": {
+        "RenameInComments": true,
+        "RenameOverloads": true,
+        "RenameInStrings": true
+    }
+}

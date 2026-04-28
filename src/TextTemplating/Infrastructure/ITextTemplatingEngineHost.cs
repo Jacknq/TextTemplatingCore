@@ -6,13 +6,9 @@ namespace TextTemplating.Infrastructure
 {
     public interface ITextTemplatingEngineHost
     {
-        /// <summary>
-        /// 默认引用的程序集
-        /// </summary>
+       
         IList<string> StandardAssemblyReferences { get; }
-        /// <summary>
-        /// 默认引用的名称空间
-        /// </summary>
+        
         IList<string> StandardImports { get; }
 
         string FileExtension { get; set; }

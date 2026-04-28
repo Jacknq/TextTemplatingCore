@@ -2,8 +2,7 @@ using Newtonsoft.Json;
 using System.Linq;
 using System;
 
-namespace DesignTimeSample
-{
+namespace DesignTimeSample{
     public class Program
     {
         public static void Main()

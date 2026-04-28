@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
         <AssemblyName>DesignTimeSample</AssemblyName>
         <PackageId>DesignTimeSample</PackageId>
         <OutputType>Exe</OutputType>
         <RestoreAdditionalProjectSources>./../../src/texttemplating.cli/nupkg</RestoreAdditionalProjectSources>
     </PropertyGroup>
-    <ItemGroup>  </ItemGroup>
+    <!-- <ItemGroup>  </ItemGroup> -->
     <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
          <PackageReference Include="TextTemplating.Core" Version="5.0.*" /> 
     </ItemGroup>
    

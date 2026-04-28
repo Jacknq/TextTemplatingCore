@@ -1,6 +1,7 @@
 
-using Microsoft.Extensions.PlatformAbstractions;
+//using Microsoft.Extensions.PlatformAbstractions;
 using TextTemplating.Infrastructure;
+using System.Runtime.InteropServices;
 
 namespace TextTemplating.Services
 {

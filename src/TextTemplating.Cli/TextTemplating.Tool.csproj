@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 	<PropertyGroup>
-		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
-		<Version>5.0.1.38</Version>
+		<TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+		<Version>5.0.1.40</Version>
     <Authors>Jacknq</Authors>
-    <Description>Latest version supports .netcore 7+
+    <Description>Latest version supports .netcore 8+
 
 	CSX and T4 scaffolding for .NET Core without IDE, 
     execute or transform .csx or .tt files from your command line or runtime, based on roslyn, no 3rdparty dependencies.
@@ -50,10 +50,10 @@ VSCODE Extension
   </ItemGroup>
   <ItemGroup>
 		<!-- <PackageReference Include="TextTemplating.Core" Version="5.0.0.0" /> -->
-		<PackageReference Include="Microsoft.CodeAnalysis" Version="4.8.0" />
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.8.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis" Version="5.3.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="5.3.0" />
 		<PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.7" />
 		
 		<PackageReference Include="TextTemplating.Core" Version="5.0.0" /> 
     <!--

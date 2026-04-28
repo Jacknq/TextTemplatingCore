@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "texttemplating.tool": {
+      "version": "5.0.1.40",
+      "commands": [
+        "tt"
+      ],
+      "rollForward": false
+    }
+  }
+}
